@@ -158,7 +158,7 @@ export const updateProfile = async (req, res) => {
     // Upload image to Cloudinary
     if (file) {
   const fileUri = getDataUri(file);
-  console.log("🧪 fileUri.content exists:", !!fileUri?.content); // ✅ ADD THIS LINE
+  console.log("🧪 fileUri.content exists:", !!fileUri?.content); 
   console.log("🌐 Uploading to Cloudinary...");
   const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
   user.photoUrl = cloudResponse.secure_url;
